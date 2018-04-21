@@ -3,4 +3,8 @@
     <string name="welcome">welcome</string>
     <string name="city_name">alexandria</string>
     <string name="get_started">get started</string>
+    <string name="restaurant">Restaurants</string>
+    <string name="beaches">Beaches</string>
+    <string name="museums">Museums</string>
+    <string name="events">Events</string>
 </resources>

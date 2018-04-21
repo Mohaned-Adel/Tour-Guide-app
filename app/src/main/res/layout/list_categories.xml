@@ -6,6 +6,44 @@
     android:orientation="vertical"
     android:background="@color/ALABASTER">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/SUNSETORANGE">
+        <TextView
+            android:id="@+id/restaurant"
+            android:text="@string/restaurant"
+            style="@style/CategoryStyle" />
+    </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/MIDDLEBLUE">
+        <TextView
+            android:id="@+id/beaches"
+            android:text="@string/beaches"
+            style="@style/CategoryStyle" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/KEYLIME">
+        <TextView
+            android:id="@+id/museums"
+            android:text="@string/museums"
+            style="@style/CategoryStyle" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/MUSTARD">
+        <TextView
+            android:id="@+id/events"
+            android:text="@string/events"
+            style="@style/CategoryStyle" />
+    </FrameLayout>
 
 </LinearLayout>
