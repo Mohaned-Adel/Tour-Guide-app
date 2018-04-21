@@ -15,16 +15,16 @@
 
         <TextView
             style="@style/welcomeStyle"
-            android:text="@string/welcome"/>
+            android:text="@string/welcome" />
 
         <TextView
             style="@style/cityStyle"
-            android:text="@string/city_name"/>
+            android:text="@string/city_name" />
 
         <Button
+            android:id="@+id/getStarted"
             style="@style/buttonStyle"
-            android:text="@string/get_started"
-            android:id="@+id/getStarted"/>
+            android:text="@string/get_started" />
 
     </LinearLayout>
 
