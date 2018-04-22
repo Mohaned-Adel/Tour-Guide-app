@@ -1,5 +1,7 @@
 package com.example.mohaned.tourguide;
 
+import android.util.Log;
+
 /**
  * Created by Mohaned on 4/22/2018.
  */
@@ -12,19 +14,21 @@ public class Place {
     private static final int NO_PROVIDING_IMAGE = -1;
     private float Rate;
 
-    public Place(String placeName, String placeAddress, int placeImage, float placeRate){
+    public Place(String placeName, String placeAddress, int placeImage, double placeRate){
         Name = placeName;
         Address = placeAddress;
         imageResource = placeImage;
-        Rate = placeRate;
+        Rate = (float) placeRate;
     }
 
     public String getPlaceName(){
         return Name;
     }
+
     public String getAddress(){
         return Address;
     }
+
     public int getImageResource(){
         return imageResource;
     }
