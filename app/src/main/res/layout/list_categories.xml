@@ -6,44 +6,14 @@
     android:orientation="vertical"
     android:background="@color/generalBackground">
 
-    <FrameLayout
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/category_restaurants">
-        <TextView
-            android:id="@+id/restaurant"
-            android:text="@string/restaurant"
-            style="@style/CategoryStyle" />
-    </FrameLayout>
+        android:layout_height="wrap_content" />
 
-    <FrameLayout
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/category_beaches">
-        <TextView
-            android:id="@+id/beaches"
-            android:text="@string/beaches"
-            style="@style/CategoryStyle" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/category_museums">
-        <TextView
-            android:id="@+id/museums"
-            android:text="@string/museums"
-            style="@style/CategoryStyle" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/category_events">
-        <TextView
-            android:id="@+id/events"
-            android:text="@string/events"
-            style="@style/CategoryStyle" />
-    </FrameLayout>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

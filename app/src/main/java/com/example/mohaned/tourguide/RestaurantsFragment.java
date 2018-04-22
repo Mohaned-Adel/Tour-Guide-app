@@ -1,8 +1,11 @@
 package com.example.mohaned.tourguide;
 
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -11,11 +14,16 @@ import java.util.ArrayList;
  * Created by Mohaned on 4/22/2018.
  */
 
-public class RestaurantsActivity extends AppCompatActivity {
+public class RestaurantsFragment extends Fragment {
+
+    public RestaurantsFragment(){
+        // it requires an empty constructor
+    }
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.place_list);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> places = new ArrayList<>();
 
@@ -31,10 +39,14 @@ public class RestaurantsActivity extends AppCompatActivity {
         places.add(new Place("Delices", "Address: 46 Saad Zaghloul, Raml Station, Alexandria Governorate", R.drawable.delices, 4.4));
         places.add(new Place("Fish Market", "Address: El-Gaish Rd, Al Mazar, Qesm Al Gomrok, Alexandria Governorate", R.drawable.fishmarket,4.2));
 
-        placeAdapter adapter = new placeAdapter(this, places, R.color.category_restaurants);
+        placeAdapter adapter = new placeAdapter (getActivity(), places, R.color.category_restaurants);
 
-        final ListView listView = (ListView) findViewById(R.id.list);
+        final ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
+        return rootView;
+
+
     }
 }

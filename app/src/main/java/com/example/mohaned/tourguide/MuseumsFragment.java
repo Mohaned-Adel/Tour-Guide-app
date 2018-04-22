@@ -1,9 +1,11 @@
 package com.example.mohaned.tourguide;
 
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.ArrayAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -12,11 +14,17 @@ import java.util.ArrayList;
  * Created by Mohaned on 4/22/2018.
  */
 
-public class MuseumsActivity extends AppCompatActivity {
+public class MuseumsFragment extends Fragment {
+
+    public MuseumsFragment(){
+
+    }
+
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.place_list);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> museums = new ArrayList<>();
 
@@ -28,10 +36,12 @@ public class MuseumsActivity extends AppCompatActivity {
         museums.add(new Place("Alexandria Aquarium", "Address: Qaitbay St.، EL ANFOUSHI، Qesm Al Gomrok, Alexandria Governorate", R.drawable.alexaquarium, 4.1));
         museums.add(new Place("Roman Auditorium", "Address: Kom Ad Dakah Gharb, Qesm Al Attarin, Alexandria Governorate", R.drawable.roman, 4.2));
 
-        placeAdapter adapter = new placeAdapter(this, museums, R.color.category_museums);
+        placeAdapter adapter = new placeAdapter(getActivity(), museums, R.color.category_museums);
 
-        final ListView listView = (ListView) findViewById(R.id.list);
+        final ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
+        return rootView;
     }
 }

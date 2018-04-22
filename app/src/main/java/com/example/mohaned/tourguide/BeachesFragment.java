@@ -1,8 +1,12 @@
 package com.example.mohaned.tourguide;
 
+
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -11,12 +15,17 @@ import java.util.ArrayList;
  * Created by Mohaned on 4/22/2018.
  */
 
-public class BeachesActivity extends AppCompatActivity {
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+public class BeachesFragment extends Fragment {
 
-        setContentView(R.layout.place_list);
+    public BeachesFragment(){
+
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> beaches = new ArrayList<>();
 
@@ -29,10 +38,13 @@ public class BeachesActivity extends AppCompatActivity {
         beaches.add(new Place("Helnan Palestine Hotel", "Address: Montazah Park، El Saa Square, Al Mandarah Bahri, Qesm Al Montazah،", R.drawable.helnan, 4.4));
         beaches.add(new Place("Hilton Alexandria", "Address: 544 El-Gaish Rd, Sidi Beshr Bahri, Qism El-Montaza, Alexandria Governorate", R.drawable.hilton, 4.4));
 
-        placeAdapter adapter = new placeAdapter(this, beaches, R.color.category_beaches);
+        placeAdapter adapter = new placeAdapter(getActivity(), beaches, R.color.category_beaches);
 
-        final ListView listView = (ListView) findViewById(R.id.list);
+        final ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
+
+        return rootView;
     }
 }

@@ -12,7 +12,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -25,46 +24,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".RestaurantsActivity"
-            android:label="@string/restaurant"
-            android:parentActivityName=".listCategory">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".listCategory" />
-        </activity>
-        <activity
-            android:name=".BeachesActivity"
-            android:label="@string/beaches"
-            android:parentActivityName=".listCategory">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".listCategory" />
-        </activity>
-        <activity
-            android:name=".MuseumsActivity"
-            android:label="@string/museums"
-            android:parentActivityName=".listCategory">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".listCategory" />
-        </activity>
-        <activity
-            android:name=".EventsActivity"
-            android:label="@string/museums"
-            android:parentActivityName=".listCategory">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".listCategory" />
         </activity>
     </application>
 

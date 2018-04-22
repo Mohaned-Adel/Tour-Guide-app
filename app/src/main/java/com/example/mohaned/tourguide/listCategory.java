@@ -3,6 +3,8 @@ package com.example.mohaned.tourguide;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -17,40 +19,14 @@ public class listCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_categories);
 
-        TextView restaurants = (TextView) findViewById(R.id.restaurant);
-        restaurants.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent restaurantPage = new Intent(listCategory.this, RestaurantsActivity.class);
-                startActivity(restaurantPage);
-            }
-        });
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        TextView beaches = (TextView) findViewById(R.id.beaches);
-        beaches.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent beachePage = new Intent(listCategory.this, BeachesActivity.class);
-                startActivity(beachePage);
-            }
-        });
+        CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());
 
-        TextView museums = (TextView) findViewById(R.id.museums);
-        museums.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent museumPage = new Intent(listCategory.this, MuseumsActivity.class);
-                startActivity(museumPage);
-            }
-        });
+        viewPager.setAdapter(adapter);
 
-        TextView events = (TextView) findViewById(R.id.events);
-        events.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent eventPage = new Intent(listCategory.this, EventsActivity.class);
-                startActivity(eventPage);
-            }
-        });
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+
+        tabLayout.setupWithViewPager(viewPager);
     }
 }

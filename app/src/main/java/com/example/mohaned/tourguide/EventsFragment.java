@@ -1,8 +1,11 @@
 package com.example.mohaned.tourguide;
 
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -11,11 +14,17 @@ import java.util.ArrayList;
  * Created by Mohaned on 4/22/2018.
  */
 
-public class EventsActivity extends AppCompatActivity {
+public class EventsFragment extends Fragment {
+
+    public EventsFragment(){
+
+    }
+
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.place_list);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.place_list, container, false);
 
         final ArrayList<Place> events = new ArrayList<>();
 
@@ -24,10 +33,12 @@ public class EventsActivity extends AppCompatActivity {
         events.add(new Place("QIG Egypt", "Address: 114 Sheraton Heliopolis, Beside Radisson Hotel -Cairo - Egypt., Cairo, Cairo Governorate", R.drawable.ic_event_black_24dp, 5.0));
         events.add(new Place("The Lounge DB", "Address: 17 Abd El-Moneim Hafez, Heliopolis, Cairo, Cairo Governorate", R.drawable.ic_event_black_24dp, 3.2));
 
-        placeAdapter adapter = new placeAdapter(this, events, R.color.category_events);
+        placeAdapter adapter = new placeAdapter(getActivity(), events, R.color.category_events);
 
-        final ListView listView = (ListView) findViewById(R.id.list);
+        final ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
+        return rootView;
     }
 }
