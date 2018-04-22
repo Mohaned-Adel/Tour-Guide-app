@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/ALABASTER">
+    android:background="@color/generalBackground">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/SUNSETORANGE">
+        android:background="@color/category_restaurants">
         <TextView
             android:id="@+id/restaurant"
             android:text="@string/restaurant"
@@ -19,7 +19,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/MIDDLEBLUE">
+        android:background="@color/category_beaches">
         <TextView
             android:id="@+id/beaches"
             android:text="@string/beaches"
@@ -29,7 +29,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/KEYLIME">
+        android:background="@color/category_museums">
         <TextView
             android:id="@+id/museums"
             android:text="@string/museums"
@@ -39,7 +39,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/MUSTARD">
+        android:background="@color/category_events">
         <TextView
             android:id="@+id/events"
             android:text="@string/events"
