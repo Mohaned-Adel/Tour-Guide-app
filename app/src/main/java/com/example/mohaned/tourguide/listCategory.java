@@ -34,5 +34,23 @@ public class listCategory extends AppCompatActivity {
                 startActivity(beachePage);
             }
         });
+
+        TextView museums = (TextView) findViewById(R.id.museums);
+        museums.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent museumPage = new Intent(listCategory.this, MuseumsActivity.class);
+                startActivity(museumPage);
+            }
+        });
+
+        TextView events = (TextView) findViewById(R.id.events);
+        events.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent eventPage = new Intent(listCategory.this, EventsActivity.class);
+                startActivity(eventPage);
+            }
+        });
     }
 }

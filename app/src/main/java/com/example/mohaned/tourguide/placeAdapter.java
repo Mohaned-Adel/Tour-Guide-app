@@ -46,7 +46,7 @@ public class placeAdapter extends ArrayAdapter {
         RatingBar ratingBar = (RatingBar) listItemView.findViewById(R.id.rating_bar);
         ratingBar.setRating(currentPlace.getRate());
 
-        Log.v("placeAdapter", "the value of ratingBar is: " + ratingBar);
+        Log.i("rating", currentPlace.getRate() + "");
 
         TextView placeAdd = (TextView) listItemView.findViewById(R.id.address);
         placeAdd.setText(currentPlace.getAddress());

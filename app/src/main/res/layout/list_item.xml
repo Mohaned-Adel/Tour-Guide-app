@@ -40,7 +40,7 @@
             android:layout_below="@id/name"
             android:numStars="5"
             android:padding="2dp"
-            android:stepSize="0.1"/>
+            android:stepSize="0.01"/>
 
         <TextView
             android:id="@+id/address"
