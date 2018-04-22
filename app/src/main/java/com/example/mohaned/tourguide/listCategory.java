@@ -25,5 +25,14 @@ public class listCategory extends AppCompatActivity {
                 startActivity(restaurantPage);
             }
         });
+
+        TextView beaches = (TextView) findViewById(R.id.beaches);
+        beaches.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent beachePage = new Intent(listCategory.this, BeachesActivity.class);
+                startActivity(beachePage);
+            }
+        });
     }
 }

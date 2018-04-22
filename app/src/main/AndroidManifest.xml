@@ -36,6 +36,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".listCategory" />
         </activity>
+        <activity
+            android:name=".BeachesActivity"
+            android:label="@string/beaches"
+            android:parentActivityName=".listCategory">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".listCategory" />
+        </activity>
     </application>
 
 </manifest>

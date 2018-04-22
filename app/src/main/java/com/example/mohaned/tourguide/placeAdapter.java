@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,8 @@ public class placeAdapter extends ArrayAdapter {
 
         RatingBar ratingBar = (RatingBar) listItemView.findViewById(R.id.rating_bar);
         ratingBar.setRating(currentPlace.getRate());
+
+        Log.v("placeAdapter", "the value of ratingBar is: " + ratingBar);
 
         TextView placeAdd = (TextView) listItemView.findViewById(R.id.address);
         placeAdd.setText(currentPlace.getAddress());
