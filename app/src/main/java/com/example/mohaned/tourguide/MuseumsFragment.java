@@ -28,13 +28,20 @@ public class MuseumsFragment extends Fragment {
 
         final ArrayList<Place> museums = new ArrayList<>();
 
-        museums.add(new Place("Alexandria National Museum", "Address: 131 El-Shaheed Galal El-Desouky, Bab Sharqi WA Wabour Al Meyah, Qesm Bab Sharqi, Alexandria Governorate", R.drawable.alexnational, 4.4));
-        museums.add(new Place("Royal Jewelry Museum", "Address: 27 Ahmed Yehia Pasha, Alexandria Governorate", R.drawable.royal, 4.6));
-        museums.add(new Place("Graeco-Roman Museum", "Address: Al Mesallah Sharq, Qesm Al Attarin, Alexandria Governorate", R.drawable.grecoroman, 3.5));
-        museums.add(new Place("Cavafy Museum", "Address: off Salah Moustafa street, at the end of Cavafy street. 2nd floor، Qesm Al Attarin, Alexandria Governorate", R.drawable.cavafy, 4.1));
-        museums.add(new Place("Mahmoud Said Museum", "Address: 6 Mohamed Pasha Said St.، GANAKLIS، Qism El-Raml, Alexandria Governorate", R.drawable.mahmoudsaid, 4.2));
-        museums.add(new Place("Alexandria Aquarium", "Address: Qaitbay St.، EL ANFOUSHI، Qesm Al Gomrok, Alexandria Governorate", R.drawable.alexaquarium, 4.1));
-        museums.add(new Place("Roman Auditorium", "Address: Kom Ad Dakah Gharb, Qesm Al Attarin, Alexandria Governorate", R.drawable.roman, 4.2));
+        museums.add(new Place(R.string.alex_nat_name, R.string.alex_nat_address,
+                R.drawable.alexnational, 4.4));
+        museums.add(new Place(R.string.royal_name, R.string.royal_address,
+                R.drawable.royal, 4.6));
+        museums.add(new Place(R.string.graeco_name, R.string.graeco_address,
+                R.drawable.grecoroman, 3.5));
+        museums.add(new Place(R.string.cavafy_name, R.string.cavafy_address,
+                R.drawable.cavafy, 4.1));
+        museums.add(new Place(R.string.mahmoud_name, R.string.mahmoud_address,
+                R.drawable.mahmoudsaid, 4.2));
+        museums.add(new Place(R.string.alex_aquarium_name, R.string.alex_aquarium_address,
+                R.drawable.alexaquarium, 4.1));
+        museums.add(new Place(R.string.roman_name, R.string.roman_address,
+                R.drawable.roman, 4.2));
 
         placeAdapter adapter = new placeAdapter(getActivity(), museums, R.color.category_museums);
 

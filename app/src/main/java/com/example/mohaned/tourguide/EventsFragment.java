@@ -28,10 +28,14 @@ public class EventsFragment extends Fragment {
 
         final ArrayList<Place> events = new ArrayList<>();
 
-        events.add(new Place("Laseronics", "Address: El-Rashid St, Madinet Al Eelam, Al Agouzah", R.drawable.ic_event_black_24dp, 4.5));
-        events.add(new Place("Go Events", "Address: 487 Abou Quer, Fleming, Qism El-Raml, Alexandria Governorate 21531", R.drawable.ic_event_black_24dp, 5.0));
-        events.add(new Place("QIG Egypt", "Address: 114 Sheraton Heliopolis, Beside Radisson Hotel -Cairo - Egypt., Cairo, Cairo Governorate", R.drawable.ic_event_black_24dp, 5.0));
-        events.add(new Place("The Lounge DB", "Address: 17 Abd El-Moneim Hafez, Heliopolis, Cairo, Cairo Governorate", R.drawable.ic_event_black_24dp, 3.2));
+        events.add(new Place(R.string.laseronics_name, R.string.laseronics_address,
+                R.drawable.ic_event_black_24dp, 4.5));
+        events.add(new Place(R.string.go_name, R.string.go_address,
+                R.drawable.ic_event_black_24dp, 5.0));
+        events.add(new Place(R.string.qig_name, R.string.qig_address,
+                R.drawable.ic_event_black_24dp, 5.0));
+        events.add(new Place(R.string.db_name, R.string.db_address,
+                R.drawable.ic_event_black_24dp, 3.2));
 
         placeAdapter adapter = new placeAdapter(getActivity(), events, R.color.category_events);
 

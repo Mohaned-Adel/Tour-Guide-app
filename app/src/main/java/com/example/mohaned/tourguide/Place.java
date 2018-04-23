@@ -8,24 +8,24 @@ import android.util.Log;
 
 public class Place {
 
-    private String Name;
-    private String Address;
+    private int Name;
+    private int Address;
     private int imageResource = NO_PROVIDING_IMAGE;
     private static final int NO_PROVIDING_IMAGE = -1;
     private float Rate;
 
-    public Place(String placeName, String placeAddress, int placeImage, double placeRate){
+    public Place(int placeName, int placeAddress, int placeImage, double placeRate){
         Name = placeName;
         Address = placeAddress;
         imageResource = placeImage;
         Rate = (float) placeRate;
     }
 
-    public String getPlaceName(){
+    public int getPlaceName(){
         return Name;
     }
 
-    public String getAddress(){
+    public int getAddress(){
         return Address;
     }
 
